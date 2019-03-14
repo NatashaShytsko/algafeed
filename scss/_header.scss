@@ -228,17 +228,18 @@
 		&:before, &:after{
 			content: "";
 			position: absolute;
-			width: 8.5rem;
-			height: 6.2rem;
-			background-size: 8.5rem 6.2rem;
+			width: 8.6rem;
+			height: 6.3rem;
 		}
 		&:before{
 			background: url($img_dir+ 'quote_top.svg') no-repeat center;
+			background-size: 8.5rem 6.2rem;
 			left: 2.5rem;
 			top: 3rem;
 		}
 		&:after{
 			background: url($img_dir+ 'quote_bottom.svg') no-repeat center;
+			background-size: 8.5rem 6.2rem;
 			right: 16%;
 			bottom: 3rem;
 			@include br2{

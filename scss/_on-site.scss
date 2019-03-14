@@ -1,5 +1,8 @@
 .on-site{
 	padding: 10rem 0;
+		@include br1{
+		padding: 8rem 0;
+	}
 	@include br2{
 		padding: 5rem 0;
 	}

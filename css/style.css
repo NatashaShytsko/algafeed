@@ -449,17 +449,18 @@ img {
 .header__bottom:before, .header__bottom:after {
   content: "";
   position: absolute;
-  width: 8.5rem;
-  height: 6.2rem;
-  background-size: 8.5rem 6.2rem;
+  width: 8.6rem;
+  height: 6.3rem;
 }
 .header__bottom:before {
   background: url("../img/quote_top.svg") no-repeat center;
+  background-size: 8.5rem 6.2rem;
   left: 2.5rem;
   top: 3rem;
 }
 .header__bottom:after {
   background: url("../img/quote_bottom.svg") no-repeat center;
+  background-size: 8.5rem 6.2rem;
   right: 16%;
   bottom: 3rem;
 }
@@ -646,6 +647,11 @@ img {
 }
 @media (max-width: 768px) {
   .items {
+    padding: 6rem 0 8rem;
+  }
+}
+@media (max-width: 768px) {
+  .items {
     padding: 5rem 0;
   }
 }
@@ -686,6 +692,11 @@ img {
 /*delivery*/
 .delivery {
   padding: 12rem 0 13rem;
+}
+@media (max-width: 992px) {
+  .delivery {
+    padding: 8rem 0;
+  }
 }
 @media (max-width: 768px) {
   .delivery {
@@ -728,6 +739,11 @@ img {
 /*on-site*/
 .on-site {
   padding: 10rem 0;
+}
+@media (max-width: 992px) {
+  .on-site {
+    padding: 8rem 0;
+  }
 }
 @media (max-width: 768px) {
   .on-site {
@@ -882,7 +898,7 @@ img {
 }
 @media (max-width: 992px) {
   .conversion {
-    padding: 13rem 0;
+    padding: 8rem 0 13rem;
   }
 }
 @media (max-width: 576px) {
@@ -1032,6 +1048,11 @@ img {
 .footer {
   padding: 12rem 0 14rem;
   color: #fff;
+}
+@media (max-width: 992px) {
+  .footer {
+    padding: 8rem 0;
+  }
 }
 @media (max-width: 768px) {
   .footer {

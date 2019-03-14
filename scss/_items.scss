@@ -1,0 +1,36 @@
+.items{
+	padding: 6rem 0 15rem;
+	text-align: center;
+	@include br2{
+		padding: 5rem 0;
+	}
+	.container{
+		@include align-items(stretch);
+	}
+	&__item{
+		width: (100%/3);
+		padding: 1rem 2.5rem;
+		border-color: #dfdfdf;
+		@include br1{
+			padding: 1rem;
+		}
+		@include br2{
+			padding: 3rem 1rem;
+			width: 100%;
+		}
+		@extend %item;
+	}
+	&__img{
+		min-height: 85px;
+		margin-bottom: 1rem;
+	}
+	&__title{
+		font: 3rem $SegR;
+		color:  $main-color;
+		margin-bottom: 3rem;
+	}
+	&__text{
+		@extend %text;
+		color:  #818181;
+	}
+}

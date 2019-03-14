@@ -1,0 +1,110 @@
+.on-site{
+	padding: 10rem 0;
+	@include br2{
+		padding: 5rem 0;
+	}
+	&__items{
+		@include align-items(stretch);
+	}
+	&__item{
+		width: (100%/2);
+		padding: 1rem 5rem 8rem;
+		position: relative;
+		border-color: #dfdfdf;
+		@extend %item;
+		@include br1{
+			padding: 1rem 3rem 8rem;
+		}
+		@include br2{
+			width: 100%;
+			padding: 3rem;		
+		}
+		@media (max-width: 480px){
+			padding: 3rem 0;	
+		}
+	}
+	&__title{
+		@extend %headline;
+		color: $main-color;
+		margin-bottom: 5rem;
+	}
+	&__img{
+		height: calc(100% - 14rem);
+		@include flex;
+		@include justify-content(center);
+		@include align-items(center);
+		@include br2{
+			height: auto;
+		}
+	}
+	&__text{
+		@extend %text;
+		color:  #818181;
+		position: absolute;
+		bottom: 0;
+		left: 5rem;
+		right: 5rem;
+		@include br1{
+			left: 3rem;
+			right: 3rem;
+		}
+		@include br2{
+			position: relative;
+			margin-top: 3rem;
+			left: 0;
+			right: 0;
+		}
+	}
+	&__circles{
+		margin: 0 auto;
+		@include justify-content(center);
+		max-width: 385px;
+		@media (max-width: 480px){
+			max-width: 365px;
+		}
+	}
+	&__circle{
+		width: 19.3rem;
+		height: 19.3rem;
+		max-width: 50%;
+		max-height: 50%;
+		border: 6px solid #d0ead4;
+		border-radius: 50%;
+		@include flex;
+		@include justify-content(center);
+		@include align-items(center);
+		flex-wrap: wrap;
+		margin: -1.3rem 0;
+		&:nth-child(2n){
+			margin-left: -1.3rem;
+			margin-right: .65rem;
+		}
+		&:nth-child(2n+1){
+			margin-right: -1.3rem;
+			margin-left: .65rem;
+		}
+		@include br1{
+			width: 14.4rem;
+			height: 14.4rem;
+		}
+		@include br2{
+			width: 19.3rem;
+			height: 19.3rem;
+		}
+		@media (max-width: 480px){
+			width: 14.4rem;
+			height: 14.4rem;
+		}
+		img{
+			max-width: 7.7rem;
+			max-height: 7.1rem;
+			margin-top: 1rem;
+		}
+		&-text{
+			font: 1.8rem/1 $SR;
+			color:  #000000;
+			margin-top: -3rem;
+			width: 100%;
+		}
+	}
+}

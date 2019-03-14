@@ -1,0 +1,252 @@
+.header{
+	background: url($img_dir+'top_bg.jpg') no-repeat center;
+	background-size: cover;
+	padding-bottom: 4rem;
+	&__top{
+		background: transparent;
+		background: -moz-linear-gradient(top, #ffffff 0%, rgba(255,255,255,.5) 60%, transparent 100%); 
+		background: -webkit-linear-gradient(top, #ffffff 0%,rgba(255,255,255,.5) 40%,transparent 100%); 
+		background: linear-gradient(to bottom, #ffffff 0%,rgba(255,255,255,.5) 60%,transparent 100%);
+	}
+	&__right{
+		align-self: self-start;
+		width: 50%;
+		display: block;
+		@include br1{
+			width: 60%;
+		}
+		@include br2{
+			width: 100%;
+		}
+	}
+	&__logo{
+		padding: 5rem 6rem;
+		position: fixed;
+		left: 0;
+		top:0;
+		text-align: left;
+		width: 50%;
+		@include br1{
+			width: 40%;
+			padding: 5rem 3rem;
+		}
+		@include br2{
+			width: calc(100% - 6rem);
+			padding: 1rem 3rem;
+		}
+		img{
+			@include br2{
+				max-height: 45px;
+			}
+		}
+		&.sticky{
+			padding: 1rem 6rem;
+			background: #fff;
+			height: 63px;
+			@include br2{
+				padding: 1rem 3rem;
+			}
+			img{
+				max-height: 45px;
+			}
+		}
+	}
+	&__menu{
+		display: block;
+		height: 100%;
+		&_wrap{
+			text-align: right;
+			position: fixed;
+			right: 0;
+			top: 0;
+			text-transform: uppercase;
+			z-index: 1000;
+			@include br1{
+				height: 63px;
+				display: block;
+			}
+			&.sticky{
+				background: #fff;
+				width: 100%;
+				@include br2{
+					width:100%;
+				}
+			}
+			#pull{
+				display: none;
+				@include br1{
+					display: block;
+					padding: 1.5rem;
+					width: 6rem;
+					margin-left: auto;
+					z-index:1005;
+					position: relative;
+				}
+			}
+			.icon-bar {
+				display: block;
+				width: 28px;
+				height: 2px;
+				border-radius: 1px;
+				background-color: #000;
+				margin: 5px auto;
+			}
+			.navbar-toggle{
+				.icon-bar:nth-of-type(2){
+					top: 1px;
+				}
+				.icon-bar:nth-of-type(3) {
+					top: 2px;
+				}
+				.icon-bar {
+					position: relative;
+					@include transition(all 200ms ease-in-out);
+				}
+				&.cross{ 
+					.icon-bar:nth-of-type(1) {
+						top: 6px;
+						@include transform(rotate(45deg));
+					}
+					.icon-bar:nth-of-type(2) {
+						background-color: transparent;
+					}
+					.icon-bar:nth-of-type(3) {
+						top: -8px;
+						@include transform(rotate(-45deg));
+					}
+				}
+			}
+		}
+		ul{		
+			@include br1{
+				@include transform(translateX(1000px));
+				background: #fff;
+				@include transition(.5s);
+				padding: 7.1rem 0 0;
+				margin-top: -6rem;
+				z-index: 1004;
+				display: inline-block;
+				&.top0{
+					@include transform(translateY(0));
+				}
+			}
+			li{			
+				@include transform(skewX(15deg));
+				&:first-child:hover, &:nth-child(2):hover, &:last-child{
+					background-color:  #ffc600;
+				}
+				&:last-child{
+					@include transform(skewX(0));
+					a{
+						@include transform(skewX(0));
+					}
+				}
+				&:last-child:hover{
+					background: #ffb400;
+				}
+				&:nth-child(3):hover{
+					a{
+						text-decoration: underline;
+					}
+				}
+				a{
+					font: 2.3rem $NB;
+					padding: 2rem 3rem;
+					color:  $main-color;		
+					@include transform(skewX(-15deg));
+					display: inline-block;
+					@media (max-width: 1080px){
+						padding: 2rem 2rem;
+					}
+					img{
+						margin-right: 1rem;
+						vertical-align: text-top;
+					}
+				}
+					@include br1{
+					display: block;
+					@include transform(skewX(0));
+					a{
+						@include transform(skewX(0));
+					}
+				}
+			}
+		}
+	}
+	&__tagline{
+		background:  rgba(76, 172, 91, 0.9);
+		background: -moz-linear-gradient(20deg, transparent 0%, transparent 4.9%, rgba(76, 172, 91, 0.9) 5%, rgba(76, 172, 91, 0.9) 100%); 
+		background: -webkit-linear-gradient(20deg, transparent 0%,transparent 4.9%,rgba(76, 172, 91, 0.9) 5%,rgba(76, 172, 91, 0.9) 100%);
+		background: linear-gradient(70deg, transparent 0%,transparent 4.9%,rgba(76, 172, 91, 0.9) 5%,rgba(76, 172, 91, 0.9) 100%);
+		text-align: right;
+		padding: calc(1.5rem + 3px) 1.5rem 1.5rem;
+		text-transform: uppercase;
+		margin-top: 63px;
+		@-moz-document url-prefix() {
+			margin-top: 68px;
+		}
+		@include br2{
+			background:  rgba(76, 172, 91, 0.9);
+			text-align: center;
+		}
+		ul{
+			li{
+				font: 2.8rem $NB;
+				color:  #ffffff;
+				padding: 0 1.5rem;
+			}
+		}
+	}
+	&__bottom{
+		background-color:  rgba(255, 255, 255, 0.7);
+		background: -moz-linear-gradient(20deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 84.9%, transparent 85%, transparent 100%); 
+		background: -webkit-linear-gradient(20deg, rgba(255, 255, 255, 0.7) 0%,rgba(255, 255, 255, 0.7) 84.9%,transparent 85%,transparent 100%);
+		background: linear-gradient(70deg, rgba(255, 255, 255, 0.7) 0%,rgba(255, 255, 255, 0.7) 84.9%,transparent 85%,transparent 100%);
+		padding: 8rem 15% 8rem 11%;
+		width: 60%;
+		color:  $main-color;
+		font-size: 2.4rem;
+		line-height: 1.25;
+		position: relative;
+		margin-top: 10rem;
+		@media (max-width: 1280px){
+			width: 75%;
+		}
+		@include br1{
+			width: 85%;
+			padding: 8rem 15%;
+		}
+		@include br2{
+			width: 100%;
+			background:  rgba(255, 255, 255, 0.7);
+			padding: 8rem 20%;
+		}
+		@include br3{
+			text-align: center;
+			padding: 10rem 15%;
+		}
+		&:before{
+			content: "";
+			position: absolute;
+			width: 8.5rem;
+			height: 6.2rem;
+			background: url($img_dir+ 'quote_top.svg') no-repeat center;
+			background-size: 8.5rem 6.2rem;
+			left: 2.5rem;
+			top: 3rem;
+		}
+		&:after{
+			content: "";
+			position: absolute;
+			width: 8.5rem;
+			height: 6.2rem;
+			background: url($img_dir+ 'quote_bottom.svg') no-repeat center;
+			background-size: 8.5rem 6.2rem;
+			right: 16%;
+			bottom: 3rem;
+			@include br2{
+				right: 3rem;
+			}
+		}
+	}
+}

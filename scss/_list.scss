@@ -1,0 +1,62 @@
+.list{
+	background: url($img_dir+'list_bg.jpg') no-repeat center bottom;
+	background-size: cover;
+	padding: 10rem 2rem 16rem;
+	@include br2{
+		padding: 5rem 2rem 15rem;
+	}
+	&__items{
+		width: 45%;
+		text-align: center;
+			@include br1{
+			width: 55%;
+		}
+		@include br2{
+			width: 100%;
+			order: 2;
+		}
+		ul{
+			margin: 0 auto;
+			width: 80%;
+			max-width: 325px;
+			@include br2{
+				width: 100%;
+			}
+			li{
+				display: block;
+				background: #fff;
+				@include flex;
+				@include align-items(center);
+				margin-bottom: 3px;
+			}
+		}
+	}
+	&__item_text{
+		font: 3rem $NB;
+		color:  $main-color;
+		text-transform: uppercase;
+		text-align: left;
+		width: calc(100% - 7.9rem);
+		padding-left: 2.5rem;
+	}
+	&__item_img{
+		background: #4bab5a;
+		width: 7.9rem;
+		height: 7.7rem;
+		@include flex;
+		@include align-items(center);
+		@include justify-content(center);
+	}
+	&__img{
+		width: 55%;
+		text-align: center;
+		@include br1{
+			width: 45%;
+		}
+		@include br2{
+			width: 100%;
+			margin-bottom: 3rem;
+			order: 1;
+		}
+	}
+}

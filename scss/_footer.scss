@@ -1,0 +1,69 @@
+.footer{
+	padding: 12rem 0 14rem;
+	color: #fff;
+	@include br2{
+		padding: 6rem 0;
+	}
+	a{
+		color: #fff;
+	}
+	&__headline{
+		@extend %headline;
+	}
+	&__team{
+		margin: 8rem 0;
+		@include align-items(stretch);
+		@include br2{
+			margin: 5rem 0;
+		}
+		&-item{
+			width: (100%/3);
+			@extend %item;
+			border-color: rgba(255,255,255,.3);
+			padding: 1rem;
+			@include br2{
+				width: 100%;			
+				max-width: 340px;
+				margin: 0 auto;
+			}
+		}
+	}
+	&__name{
+		font: 2rem/1.5 $SB;
+	}
+	&__position{
+		@extend %text;
+	}
+	&__email{
+		font: 1.6rem/1.875 $SR;
+		@include br1{
+			font-size: 1.6vmin;
+		}
+		@include br2{
+			font-size: 1.6rem;
+		}
+	}
+	.btn{
+		margin-top: 8rem;
+		display: inline-block;
+		font: 3rem $SegB;
+		color:  $bg-green;
+		text-transform: uppercase;
+		background: #fff;
+		border: 1px solid #fff;
+		max-width: 95%;
+		min-width: 60%;
+		padding: 1.6rem;
+		@include border-radius(3.7rem);
+		&:hover{
+			background: $bg-green;
+			color: #fff;
+		}
+		@include br3{
+			font-size: 2.5rem;
+		}
+		@media (max-width: 435px){
+			font-size: 1.8rem;
+		}
+	}
+}

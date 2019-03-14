@@ -119,8 +119,8 @@
 		}
 		ul{		
 			@include br1{
-				@include transform(translateX(1000px));
 				background: #fff;
+				@include transform(translateX(1000px));
 				@include transition(.5s);
 				padding: 7.1rem 0 0;
 				margin-top: -6rem;
@@ -225,23 +225,20 @@
 			text-align: center;
 			padding: 10rem 15%;
 		}
-		&:before{
+		&:before, &:after{
 			content: "";
 			position: absolute;
 			width: 8.5rem;
 			height: 6.2rem;
-			background: url($img_dir+ 'quote_top.svg') no-repeat center;
 			background-size: 8.5rem 6.2rem;
+		}
+		&:before{
+			background: url($img_dir+ 'quote_top.svg') no-repeat center;
 			left: 2.5rem;
 			top: 3rem;
 		}
 		&:after{
-			content: "";
-			position: absolute;
-			width: 8.5rem;
-			height: 6.2rem;
 			background: url($img_dir+ 'quote_bottom.svg') no-repeat center;
-			background-size: 8.5rem 6.2rem;
 			right: 16%;
 			bottom: 3rem;
 			@include br2{

@@ -56,7 +56,6 @@
 		}
 	}
 	&__circles{
-		margin: 0 auto;
 		@include justify-content(center);
 		max-width: 385px;
 		@media (max-width: 480px){
@@ -69,7 +68,7 @@
 		max-width: 50%;
 		max-height: 50%;
 		border: 6px solid #d0ead4;
-		border-radius: 50%;
+		@include border-radius;
 		@include flex;
 		@include justify-content(center);
 		@include align-items(center);

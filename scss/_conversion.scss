@@ -35,6 +35,15 @@
 				background: url($img_dir+'big-right-arrow.svg') no-repeat center;
 				background-size: 27.3rem 2.3rem;
 				left: calc(-27.3rem - ((100%/3 - 19.3rem)/2) - 1rem);
+				@include br1{
+					left: calc(-27.3rem + ((100% - 19.3rem)/2) - 1rem);
+				}
+				@include br3{
+					width: 21.1rem;
+					height: 1.8rem;
+					background-size: 21.1rem 1.8rem;
+					left: calc(-21.1rem + ((100% - 19.3rem)/2) - 1rem);
+				}
 			}
 		}
 		&:nth-child(2),&:nth-child(3){
@@ -44,6 +53,20 @@
 				background: url($img_dir+'right-arrow.svg') no-repeat center;
 				background-size: 5.2rem 2.3rem;
 				left: calc(-5.2rem - ((100%/3 - 19.3rem)/2 + 2rem));
+				@include br1{
+					width: 2.3rem;
+					height: 5.2rem;
+					background: url($img_dir+'small-down-arrow.svg') no-repeat center;
+					background-size: 2.3rem 5.2rem;
+					left: 50%;
+					@include transform(translateX(-50%));
+					top: -6.2rem;
+				}
+				@include br3{
+					width: 1.8rem;
+					height: 4.1rem;
+					background-size: 1.8rem 4.1rem;
+				}
 			}
 		}	
 		&:nth-child(3){
@@ -53,57 +76,20 @@
 				background: url($img_dir+'down-arrow.svg') no-repeat center;
 				background-size: 8.9rem 32.9rem;
 				right: calc(-8.9rem - ((100%/3 - 19.3rem)/2) - .5rem);
-			}
-		}
-		@include br1{
-			width: 100%;
-			margin-bottom: 8rem;
-			&:nth-child(1){
-				&:before{
-					left: calc(-27.3rem + ((100% - 19.3rem)/2) - 1rem);
-				}
-			}
-			&:nth-child(2),&:nth-child(3){
-				&:before{
-					width: 2.3rem;
-					height: 5.2rem;
-					background: url($img_dir+'small-down-arrow.svg') no-repeat center;
-					background-size: 2.3rem 5.2rem;
-					left: 50%;
-					@include transform(translateX(-50%));
-					top: -6.2rem;
-				}
-			}	
-			&:nth-child(3){
-				&:after{
+				@include br1{
 					right: calc(-8.9rem + ((100% - 19.3rem)/2) - .5rem);
 				}
-			}
-		}
-		@include br3{
-			&:nth-child(1){
-				&:before{
-					width: 21.1rem;
-					height: 1.8rem;
-					background-size: 21.1rem 1.8rem;
-					left: calc(-21.1rem + ((100% - 19.3rem)/2) - 1rem);
-				}
-			}
-			&:nth-child(2),&:nth-child(3){
-				&:before{
-					width: 1.8rem;
-					height: 4.1rem;
-					background-size: 1.8rem 4.1rem;
-				}
-			}	
-			&:nth-child(3){
-				&:after{
+				@include br3{
 					width: 7rem;
 					height: 25.9rem;
 					background-size: 7rem 25.9rem;
 					right: calc(-7rem + ((100% - 19.3rem)/2) - .5rem);
 				}
 			}
+		}
+		@include br1{
+			width: 100%;
+			margin-bottom: 8rem;
 		}
 	}
 	&__text{
@@ -118,10 +104,10 @@
 		width: 19.3rem;
 		height: 19.3rem;
 		margin: 0 auto;
-		@include border-radius;
 		background-color:  rgba(255, 255, 255, 0.7);
 		border: 6px solid #5bc42d;
 		@include flex;
+		@include border-radius;
 		@include justify-content(center);
 		@include align-items(center);
 		flex-wrap: wrap;
